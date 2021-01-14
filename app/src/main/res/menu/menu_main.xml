@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home_item"
+            android:icon="@drawable/home_default"
+            android:title="Trang chủ">
+        </item>
+
+        <item
+            android:id="@+id/nav_order_item"
+            android:title="Quản lý đơn hàng"
+            android:icon="@drawable/order_default">
+        </item>
+
+        <item
+            android:id="@+id/nav_category_item"
+            android:title="Quản lý danh mục"
+            android:icon="@drawable/category_default">
+        </item>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_product_item"-->
+<!--            android:title="Quản lý sản phẩm"-->
+<!--            android:icon="@drawable/product_all_default">-->
+<!--        </item>-->
+
+        <item
+            android:id="@+id/nav_user_item"
+            android:title="Quản lý người dùng"
+            android:icon="@drawable/user_default">
+        </item>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_myAccount_item"-->
+<!--            android:title="Tài khoản của tôi"-->
+<!--            android:icon="@drawable/account_default">-->
+<!--        </item>-->
+
+        <item
+            android:id="@+id/nav_logout_item"
+            android:title="Đăng xuất"
+            android:icon="@drawable/logout_default">
+        </item>
+
+    </group>
+
+</menu>

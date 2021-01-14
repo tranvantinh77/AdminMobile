@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".fragment.FragmentProductList">
+
+<!--    <include layout="@layout/toolbar_fragment">-->
+
+<!--    </include>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--            app:layout_constraintTop_toBottomOf="@id/toolbar_fragment"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_product1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgV_product1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_samsung__galaxy_s20" />
+
+                    <TextView
+                        android:id="@+id/txtV_product1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/imgV_product1"
+                        android:layout_toRightOf="@+id/imgV_product1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Samsung Galaxy S20"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"/>
+
+                    <TextView
+                        android:id="@+id/txtV_product1_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product1_name"
+                        android:layout_toEndOf="@+id/imgV_product1"
+                        android:layout_toRightOf="@+id/imgV_product1"
+                        android:text="Giá: 21.490.000 Đ"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_product1_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product1_price"
+                        android:layout_toEndOf="@+id/imgV_product1"
+                        android:layout_toRightOf="@+id/imgV_product1"
+                        android:text="Danh mục: Điện thoại"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtV_product1_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txt_product1_category"
+                        android:layout_toEndOf="@+id/imgV_product1"
+                        android:layout_toRightOf="@+id/imgV_product1"
+                        android:text="Số lượng: 25"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_product2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgV_product2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_samsung__galaxy_s20" />
+
+                    <TextView
+                        android:id="@+id/txtV_product2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toEndOf="@+id/imgV_product2"
+                        android:layout_toRightOf="@+id/imgV_product2"
+                        android:text="Samsung Galaxy S20"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"/>
+
+                    <TextView
+                        android:id="@+id/txtV_product2_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product2_name"
+                        android:layout_toEndOf="@+id/imgV_product2"
+                        android:layout_toRightOf="@+id/imgV_product2"
+                        android:text="Giá: 21.490.000 Đ"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_product2_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product2_price"
+                        android:layout_toEndOf="@+id/imgV_product2"
+                        android:layout_toRightOf="@+id/imgV_product2"
+                        android:text="Danh mục: Điện thoại"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtV_product2_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txt_product2_category"
+                        android:layout_toEndOf="@+id/imgV_product2"
+                        android:layout_toRightOf="@+id/imgV_product2"
+                        android:text="Số lượng: 25"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_product3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgV_product3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_samsung__galaxy_s20" />
+
+                    <TextView
+                        android:id="@+id/txtV_product3_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toEndOf="@+id/imgV_product3"
+                        android:layout_toRightOf="@+id/imgV_product3"
+                        android:text="Samsung Galaxy S20"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"/>
+
+                    <TextView
+                        android:id="@+id/txtV_product3_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product3_name"
+                        android:layout_toEndOf="@+id/imgV_product3"
+                        android:layout_toRightOf="@+id/imgV_product3"
+                        android:text="Giá: 21.490.000 Đ"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_product3_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product3_price"
+                        android:layout_toEndOf="@+id/imgV_product3"
+                        android:layout_toRightOf="@+id/imgV_product3"
+                        android:text="Danh mục: Điện thoại"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtV_product3_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txt_product3_category"
+                        android:layout_toEndOf="@+id/imgV_product3"
+                        android:layout_toRightOf="@+id/imgV_product3"
+                        android:text="Số lượng: 25"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_product4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgV_product4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_dell_ins_n3593_i7" />
+
+                    <TextView
+                        android:id="@+id/txtV_product4_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toEndOf="@+id/imgV_product4"
+                        android:layout_toRightOf="@+id/imgV_product4"
+                        android:text="Dell Inspiron N3593 i7"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"/>
+
+                    <TextView
+                        android:id="@+id/txtV_product4_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product4_name"
+                        android:layout_toEndOf="@+id/imgV_product4"
+                        android:layout_toRightOf="@+id/imgV_product4"
+                        android:text="Giá: 20.590.000 Đ"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_product4_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product4_price"
+                        android:layout_toEndOf="@+id/imgV_product4"
+                        android:layout_toRightOf="@+id/imgV_product4"
+                        android:text="Danh mục: Laptop"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtV_product4_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txt_product4_category"
+                        android:layout_toEndOf="@+id/imgV_product4"
+                        android:layout_toRightOf="@+id/imgV_product4"
+                        android:text="Số lượng: 25"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_product5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgV_product5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_dell_ins_n3593_i7" />
+
+                    <TextView
+                        android:id="@+id/txtV_product5_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toEndOf="@+id/imgV_product5"
+                        android:layout_toRightOf="@+id/imgV_product5"
+                        android:text="Dell Inspiron N3593 i7"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"/>
+
+                    <TextView
+                        android:id="@+id/txtV_product5_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product5_name"
+                        android:layout_toEndOf="@+id/imgV_product5"
+                        android:layout_toRightOf="@+id/imgV_product5"
+                        android:text="Giá: 20.590.000 Đ"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_product5_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product5_price"
+                        android:layout_toEndOf="@+id/imgV_product5"
+                        android:layout_toRightOf="@+id/imgV_product5"
+                        android:text="Danh mục: Laptop"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtV_product5_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txt_product5_category"
+                        android:layout_toEndOf="@+id/imgV_product5"
+                        android:layout_toRightOf="@+id/imgV_product5"
+                        android:text="Số lượng: 25"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV_product6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgV_product6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_dell_ins_n3593_i7" />
+
+                    <TextView
+                        android:id="@+id/txtV_product6_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_toEndOf="@+id/imgV_product6"
+                        android:layout_toRightOf="@+id/imgV_product6"
+                        android:text="Dell Inspiron N3593 i7"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp"/>
+
+                    <TextView
+                        android:id="@+id/txtV_product6_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product6_name"
+                        android:layout_toEndOf="@+id/imgV_product6"
+                        android:layout_toRightOf="@+id/imgV_product6"
+                        android:text="Giá: 20.590.000 Đ"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_product6_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txtV_product6_price"
+                        android:layout_toEndOf="@+id/imgV_product6"
+                        android:layout_toRightOf="@+id/imgV_product6"
+                        android:text="Danh mục: Laptop"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtV_product6_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_below="@+id/txt_product6_category"
+                        android:layout_toEndOf="@+id/imgV_product6"
+                        android:layout_toRightOf="@+id/imgV_product6"
+                        android:text="Số lượng: 25"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
