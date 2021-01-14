@@ -70,10 +70,9 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
 
             }
         });
+
         rcv_phone.setAdapter(productAdapter);
         rcv_phone.setLayoutManager(new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL, false));
-
-
     }
 
     private ArrayList<Product> getDT() {
@@ -102,7 +101,7 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
                             mota = jsonObject.getString("mota");
                             idsanphamdienthoai = jsonObject.getInt("idsanphamdienthoai");
                             idsanpham = jsonObject.getInt("idsanpham");
-                           list.add(new Product(id, ten, hinhanh, gia, thongsokithuat, mota, idsanphamdienthoai, idsanpham));
+                            list.add(new Product(id, ten, hinhanh, gia, thongsokithuat, mota, idsanphamdienthoai, idsanpham));
                             productAdapter.notifyDataSetChanged();
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -118,6 +117,5 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
         });
         requestQueue.add(jsonArrayRequest);
         return list;
-
     }
 }

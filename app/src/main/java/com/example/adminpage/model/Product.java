@@ -23,6 +23,16 @@ public class Product implements Serializable {
         this.IDsanpham = IDsanpham;
     }
 
+    public Product(int ID, String ten, String hinhanh, Integer gia, String thongsokithuat, String mota, int IDsanpham) {
+        this.ID = ID;
+        Ten = ten;
+        Hinhanh = hinhanh;
+        Gia = gia;
+        Thongsokithuat = thongsokithuat;
+        Mota = mota;
+        this.IDsanpham = IDsanpham;
+    }
+
     public int getID() {
         return ID;
     }
