@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.adminpage.adapter.ProductAdapter;
+import com.example.adminpage.dialog.MyCustomDialog;
 import com.example.adminpage.model.Product;
 import com.example.adminpage.ultil.Server;
 
@@ -27,7 +28,6 @@ import java.util.ArrayList;
 
 public class ActivityCategoryListLaptop extends AppCompatActivity {
 
-    Function function = new Function();
     Toolbar toolbar_cgr_list_laptop;
     RecyclerView rcv_laptop;
     ImageView imgV_add_lap;
@@ -59,14 +59,21 @@ public class ActivityCategoryListLaptop extends AppCompatActivity {
         imgV_add_lap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategoryAddLaptop(ActivityCategoryListLaptop.this);
+                Function.goToActivityCategoryAddLaptop(ActivityCategoryListLaptop.this);
             }
         });
 
         productAdapter = new ProductAdapter(getLT(), new ProductAdapter.IClickItemListener() {
             @Override
-            public void onClickItem(Product product) {
+            public void onClickEdit(Product product) {
+                Function.goToActivityCategoryEditLap(ActivityCategoryListLaptop.this);
+            }
 
+            @Override
+            public void onClickRemove(Product product) {
+                String message = "Bạn có chắc muốn xoá ?";
+                MyCustomDialog myCustomDialog = new MyCustomDialog(ActivityCategoryListLaptop.this, message);
+                myCustomDialog.show();
             }
         });
 

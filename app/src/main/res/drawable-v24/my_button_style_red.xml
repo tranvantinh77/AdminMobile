@@ -8,7 +8,7 @@
 <!--        </shape>-->
         <shape android:shape="rectangle"  >
             <corners android:radius="10dp" />
-            <solid android:color="#9953AC56" />
+            <solid android:color="#99FF4444" />
         </shape>
     </item>
 <!--    <item android:state_focused="true">-->
@@ -26,7 +26,7 @@
 <!--        </shape>-->
         <shape android:shape="rectangle"  >
             <corners android:radius="10dp" />
-            <solid android:color="#53AC56" />
+            <solid android:color="@android:color/holo_red_light" />
         </shape>
     </item>
 </selector>

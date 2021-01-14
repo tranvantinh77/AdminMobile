@@ -9,7 +9,6 @@ import androidx.appcompat.widget.Toolbar;
 
 public class ActivityCategoryAdd extends AppCompatActivity {
 
-//    Function function = new Function();
     Toolbar toolbar_cgr_add;
 
     @Override

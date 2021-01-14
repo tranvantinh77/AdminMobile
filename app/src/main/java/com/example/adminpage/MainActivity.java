@@ -18,7 +18,6 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Function function = new Function();
     DrawerLayout drawerLayout_main;
     NavigationView navigationView_main;
     Toolbar toolbar_main;
@@ -53,21 +52,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         cardV_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityOrder(MainActivity.this);
+                Function.goToActivityOrder(MainActivity.this);
             }
         });
 
         cardV_category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategory(MainActivity.this);
+                Function.goToActivityCategory(MainActivity.this);
             }
         });
 
         cardV_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityUser(MainActivity.this);
+                Function.goToActivityUser(MainActivity.this);
             }
         });
 
@@ -92,13 +91,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home_item:
                 break;
             case R.id.nav_order_item:
-                function.goToActivityOrder(MainActivity.this);
+                Function.goToActivityOrder(MainActivity.this);
                 break;
             case R.id.nav_category_item:
-                function.goToActivityCategory(MainActivity.this);
+                Function.goToActivityCategory(MainActivity.this);
                 break;
             case R.id.nav_user_item:
-                function.goToActivityUser(MainActivity.this);
+                Function.goToActivityUser(MainActivity.this);
                 break;
             case R.id.nav_logout_item:
                 break;

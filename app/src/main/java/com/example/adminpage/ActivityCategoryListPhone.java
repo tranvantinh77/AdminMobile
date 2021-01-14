@@ -1,5 +1,6 @@
 package com.example.adminpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.adminpage.adapter.ProductAdapter;
+import com.example.adminpage.dialog.MyCustomDialog;
 import com.example.adminpage.model.Product;
 import com.example.adminpage.ultil.Server;
 
@@ -28,7 +30,6 @@ import java.util.ArrayList;
 
 public class ActivityCategoryListPhone extends AppCompatActivity {
 
-    Function function = new Function();
     Toolbar toolbar_cgr_list_phone;
     RecyclerView rcv_phone;
     ImageView imgV_add_phone;
@@ -43,6 +44,7 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
         toolbar_cgr_list_phone = findViewById(R.id.toolbar_have_icon_add);
         rcv_phone = findViewById(R.id.rcv_phone);
         imgV_add_phone = findViewById(R.id.imgV_icon_add);
+
 
         // Set title cho toolbar
         setTitle("Danh sách điện thoại");
@@ -60,14 +62,22 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
         imgV_add_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategoryAddPhone(ActivityCategoryListPhone.this);
+                Function.goToActivityCategoryAddPhone(ActivityCategoryListPhone.this);
             }
         });
 
+        // Set sự kiện cho nút edit và nút xoá của từng sản phẩm
         productAdapter = new ProductAdapter(getDT(), new ProductAdapter.IClickItemListener() {
             @Override
-            public void onClickItem(Product product) {
+            public void onClickEdit(Product product) {
+                Function.goToActivityCategoryEditPhone(ActivityCategoryListPhone.this);
+            }
 
+            @Override
+            public void onClickRemove(Product product) {
+                String message = "Bạn có chắc muốn xoá ?";
+                MyCustomDialog myCustomDialog = new MyCustomDialog(ActivityCategoryListPhone.this, message);
+                myCustomDialog.show();
             }
         });
 

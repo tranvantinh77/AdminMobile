@@ -14,22 +14,22 @@ public class Product implements Serializable {
 
     public Product(int ID, String ten, String hinhanh, Integer gia, String thongsokithuat, String mota, int IDsanphamdienthoai, int IDsanpham) {
         this.ID = ID;
-        Ten = ten;
-        Hinhanh = hinhanh;
-        Gia = gia;
-        Thongsokithuat = thongsokithuat;
-        Mota = mota;
+        this.Ten = ten;
+        this.Hinhanh = hinhanh;
+        this.Gia = gia;
+        this.Thongsokithuat = thongsokithuat;
+        this.Mota = mota;
         this.IDsanphamdienthoai = IDsanphamdienthoai;
         this.IDsanpham = IDsanpham;
     }
 
     public Product(int ID, String ten, String hinhanh, Integer gia, String thongsokithuat, String mota, int IDsanpham) {
         this.ID = ID;
-        Ten = ten;
-        Hinhanh = hinhanh;
-        Gia = gia;
-        Thongsokithuat = thongsokithuat;
-        Mota = mota;
+        this.Ten = ten;
+        this.Hinhanh = hinhanh;
+        this.Gia = gia;
+        this.Thongsokithuat = thongsokithuat;
+        this.Mota = mota;
         this.IDsanpham = IDsanpham;
     }
 

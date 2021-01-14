@@ -18,7 +18,6 @@ import com.google.android.material.navigation.NavigationView;
 
 public class ActivityUser extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Function function = new Function();
     DrawerLayout drawerLayout_user;
     NavigationView navigationView_user;
     Toolbar toolbar_user;
@@ -74,11 +73,11 @@ public class ActivityUser extends AppCompatActivity implements NavigationView.On
                 finish();
                 break;
             case R.id.nav_order_item:
-                function.goToActivityOrder(ActivityUser.this);
+                Function.goToActivityOrder(ActivityUser.this);
                 finish();
                 break;
             case R.id.nav_category_item:
-                function.goToActivityUser(ActivityUser.this);
+                Function.goToActivityUser(ActivityUser.this);
                 finish();
                 break;
             case R.id.nav_user_item:

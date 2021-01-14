@@ -16,7 +16,6 @@ import com.google.android.material.navigation.NavigationView;
 
 public class ActivityCategory extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Function function = new Function();
     DrawerLayout drawerLayout_cgr;
     NavigationView navigationView_cgr;
     Toolbar toolbar_cgr;
@@ -50,14 +49,14 @@ public class ActivityCategory extends AppCompatActivity implements NavigationVie
         cardV_allCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategoryList(ActivityCategory.this);
+                Function.goToActivityCategoryList(ActivityCategory.this);
             }
         });
 
         cardV_addCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategoryAdd(ActivityCategory.this);
+                Function.goToActivityCategoryAdd(ActivityCategory.this);
             }
         });
 
@@ -101,14 +100,14 @@ public class ActivityCategory extends AppCompatActivity implements NavigationVie
                 finish();
                 break;
             case R.id.nav_order_item:
-                function.goToActivityOrder(ActivityCategory.this);
+                Function.goToActivityOrder(ActivityCategory.this);
                 finish();
                 break;
             case R.id.nav_category_item:
                 drawerLayout_cgr.closeDrawer(GravityCompat.START);
                 break;
             case R.id.nav_user_item:
-                function.goToActivityUser(ActivityCategory.this);
+                Function.goToActivityUser(ActivityCategory.this);
                 finish();
                 break;
             case R.id.nav_logout_item:

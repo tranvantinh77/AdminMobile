@@ -60,12 +60,12 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:id="@+id/imgB_icon_edit_phone"
+                    android:id="@+id/imgB_icon_edit"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="20dp"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/imgB_icon_delete_phone"
+                    android:layout_toStartOf="@+id/imgB_icon_delete"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_icon_edit_black"
                     android:background="@android:color/white"
@@ -74,7 +74,7 @@
                 </ImageButton>
 
                 <ImageButton
-                    android:id="@+id/imgB_icon_delete_phone"
+                    android:id="@+id/imgB_icon_delete"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginHorizontal="10dp"

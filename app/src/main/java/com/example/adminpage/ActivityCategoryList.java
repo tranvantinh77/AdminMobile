@@ -10,7 +10,6 @@ import androidx.cardview.widget.CardView;
 
 public class ActivityCategoryList extends AppCompatActivity {
 
-    Function function = new Function();
     Toolbar toolbar_cgr_list;
     CardView cardV_cgr_phone, cardV_cgr_lap, cardV_cgr_accessories;
 
@@ -43,21 +42,21 @@ public class ActivityCategoryList extends AppCompatActivity {
         cardV_cgr_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategoryListPhone(ActivityCategoryList.this);
+                Function.goToActivityCategoryListPhone(ActivityCategoryList.this);
             }
         });
 
         cardV_cgr_lap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategoryListLaptop(ActivityCategoryList.this);
+                Function.goToActivityCategoryListLaptop(ActivityCategoryList.this);
             }
         });
 
         cardV_cgr_accessories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                function.goToActivityCategoryListAccessories(ActivityCategoryList.this);
+                Function.goToActivityCategoryListAccessories(ActivityCategoryList.this);
             }
         });
     }

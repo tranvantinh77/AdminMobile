@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.adminpage.Function;
 import com.example.adminpage.R;
 import com.example.adminpage.model.Product;
 import com.squareup.picasso.Picasso;
@@ -23,7 +24,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
     private IClickItemListener mIClickItemListener;
 
     public interface IClickItemListener {
-        void onClickItem(Product product);
+        void onClickEdit(Product product);
+        void onClickRemove(Product product);
     }
 
     public ProductAdapter(ArrayList<Product> arrayList, IClickItemListener mIClickItemListener) {
@@ -42,7 +44,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
 
     @Override
     public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
-        Product product = arrayList.get(position);
+        final Product product = arrayList.get(position);
         holder.txt_product_name.setText(product.getTen());
         holder.txt_product_name.setLines(2);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
@@ -52,6 +54,19 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
                 .fit()
                 .into(holder.imgV_product);
 
+        holder.imgB_icon_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIClickItemListener.onClickEdit(product);
+            }
+        });
+
+        holder.imgB_icon_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIClickItemListener.onClickRemove(product);
+            }
+        });
     }
 
     @Override
@@ -64,19 +79,18 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
 
     public class ItemHolder extends RecyclerView.ViewHolder {
          ImageView imgV_product;
-         TextView txt_product_name,txt_product_price;
-         ImageButton imgB_icon_edit_phone,imgB_icon_delete_phone;
+         TextView txt_product_name, txt_product_price;
+         ImageButton imgB_icon_edit, imgB_icon_delete;
+
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
 
             imgV_product = itemView.findViewById(R.id.imgV_product);
             txt_product_name = itemView.findViewById(R.id.txt_product_name);
             txt_product_price = itemView.findViewById(R.id.txt_product_price);
-            imgB_icon_edit_phone = itemView.findViewById(R.id.imgB_icon_edit_phone);
-            imgB_icon_delete_phone = itemView.findViewById(R.id.imgB_icon_delete_phone);
+            imgB_icon_edit = itemView.findViewById(R.id.imgB_icon_edit);
+            imgB_icon_delete = itemView.findViewById(R.id.imgB_icon_delete);
             imgV_product = itemView.findViewById(R.id.imgV_product);
-
-
 
         }
     }

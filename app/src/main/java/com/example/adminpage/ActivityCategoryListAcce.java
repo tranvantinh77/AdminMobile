@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.adminpage.adapter.ProductAdapter;
+import com.example.adminpage.dialog.MyCustomDialog;
 import com.example.adminpage.model.Product;
 import com.example.adminpage.ultil.Server;
 
@@ -65,8 +66,15 @@ public class ActivityCategoryListAcce extends AppCompatActivity {
 
         productAdapter = new ProductAdapter(getPK(), new ProductAdapter.IClickItemListener() {
             @Override
-            public void onClickItem(Product product) {
+            public void onClickEdit(Product product) {
+                Function.goToActivityCategoryEditAcce(ActivityCategoryListAcce.this);
+            }
 
+            @Override
+            public void onClickRemove(Product product) {
+                String message = "Bạn có chắc muốn xoá ?";
+                MyCustomDialog myCustomDialog = new MyCustomDialog(ActivityCategoryListAcce.this, message);
+                myCustomDialog.show();
             }
         });
 

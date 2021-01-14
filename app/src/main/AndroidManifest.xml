@@ -27,6 +27,9 @@
         <activity android:name=".ActivityCategoryAddPhone"></activity>
         <activity android:name=".ActivityCategoryAddLaptop"></activity>
         <activity android:name=".ActivityCategoryAddAcce"></activity>
+        <activity android:name=".ActivityCategoryEditPhone"></activity>
+        <activity android:name=".ActivityCategoryEditLaptop"></activity>
+        <activity android:name=".ActivityCategoryEditAcce"></activity>
 
 
         <meta-data
