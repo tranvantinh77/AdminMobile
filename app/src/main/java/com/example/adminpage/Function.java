@@ -6,6 +6,14 @@ import android.content.Intent;
 public class Function {
 
     /**
+     * Trang chủ
+     */
+    public static void goToMainActivity(Context context) {
+        Intent myIntent = new Intent(context, MainActivity.class);
+        context.startActivity(myIntent);
+    }
+
+    /**
      * Quản lý Đơn hàng
      */
     // Quản lý đơn hàng

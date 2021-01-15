@@ -41,7 +41,6 @@ public class ActivityOrder extends AppCompatActivity implements NavigationView.O
         toggle.syncState();
         navigationView_ord.setNavigationItemSelectedListener(this);
 
-        // Chuyển đến các Fragment
 
     }
 
@@ -66,9 +65,11 @@ public class ActivityOrder extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_category_item:
                 Function.goToActivityCategory(ActivityOrder.this);
+                finish();
                 break;
             case R.id.nav_user_item:
                 Function.goToActivityUser(ActivityOrder.this);
+                finish();
                 break;
             case R.id.nav_logout_item:
                 break;

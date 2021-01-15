@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout_main;
     NavigationView navigationView_main;
     Toolbar toolbar_main;
-    CardView cardV_product, cardV_category, cardV_user, cardV_order;
+    CardView cardV_category, cardV_user, cardV_order;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
