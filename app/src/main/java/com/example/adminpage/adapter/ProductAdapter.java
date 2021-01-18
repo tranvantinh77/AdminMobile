@@ -46,7 +46,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
     public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
         final Product product = arrayList.get(position);
         holder.txt_product_name.setText(product.getTen());
-        holder.txt_product_name.setLines(2);
+//        holder.txt_product_name.setLines(3);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         holder.txt_product_price.setText("Giá : "+ decimalFormat.format(product.getGia())+ " Đ");
         Picasso.get()
