@@ -1,4 +1,4 @@
-package com.example.adminpage.dialog;
+package com.example.adminpage;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.adminpage.R;
 
 public class MyCustomDialog extends Dialog implements View.OnClickListener {
 

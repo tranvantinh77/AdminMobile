@@ -2,6 +2,7 @@ package com.example.adminpage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 
 public class Function {
 
@@ -67,15 +68,6 @@ public class Function {
         context.startActivity(myIntent);
     }
 
-    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Sửa product
-    public static void goToActivityEditProduct(Context context) {
-        Intent myIntent = new Intent(context, ActivityCategoryEditProduct.class);
-        context.startActivity(myIntent);
-    }
-
-    /**
-     * Quản lý Người dùng
-     */
     // Quản lý người dùng
     public static void goToActivityUser(Context context) {
         Intent myIntent = new Intent(context, ActivityUser.class);

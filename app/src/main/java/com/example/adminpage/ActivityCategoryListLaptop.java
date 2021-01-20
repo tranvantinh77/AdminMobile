@@ -1,8 +1,11 @@
 package com.example.adminpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,11 +18,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.adminpage.adapter.ProductAdapter;
-import com.example.adminpage.dialog.MyCustomDialog;
 import com.example.adminpage.model.Product;
 import com.example.adminpage.ultil.Server;
 
@@ -72,7 +73,11 @@ public class ActivityCategoryListLaptop extends AppCompatActivity {
         productAdapter = new ProductAdapter(getLT(), new ProductAdapter.IClickItemListener() {
             @Override
             public void onClickEdit(Product product) {
-                Function.goToActivityEditProduct(ActivityCategoryListLaptop.this);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("product", product);
+                Intent intent = new Intent(getApplicationContext(), ActivityCategoryEditProduct.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
 
             @Override
@@ -80,6 +85,7 @@ public class ActivityCategoryListLaptop extends AppCompatActivity {
                 String message = "Bạn có chắc muốn xoá ?";
                 MyCustomDialog myCustomDialog = new MyCustomDialog(ActivityCategoryListLaptop.this, message);
                 myCustomDialog.show();
+
             }
         });
 

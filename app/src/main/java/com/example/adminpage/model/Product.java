@@ -19,37 +19,6 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    // constructor phu kien
-    public Product(int ID, String ten, String hinhanh, String hinhanh2, String hinhanh3, String hinhanh4, Integer gia, String thongsokithuat, String mota, int IDsanpham) {
-        this.ID = ID;
-        Ten = ten;
-        Hinhanh = hinhanh;
-        Hinhanh2 = hinhanh2;
-        Hinhanh3 = hinhanh3;
-        Hinhanh4 = hinhanh4;
-        Gia = gia;
-        Thongsokithuat = thongsokithuat;
-        Mota = mota;
-        this.IDsanpham = IDsanpham;
-    }
-
-    // constructor điện thoiaj, laptop
-    public Product(int ID, String ten, String hinhanh, String hinhanh2, String hinhanh3, String hinhanh4, Integer gia, String thongsokithuat, String mota, int IDloaisanpham, int IDsanpham) {
-
-        this.ID = ID;
-        Ten = ten;
-        Hinhanh = hinhanh;
-        Hinhanh2 = hinhanh2;
-        Hinhanh3 = hinhanh3;
-        Hinhanh4 = hinhanh4;
-        Gia = gia;
-        Thongsokithuat = thongsokithuat;
-        Mota = mota;
-        this.IDloaisanpham = IDloaisanpham;
-        this.IDsanpham = IDsanpham;
-    }
-
-    // constructor sản phẩm nổi bật
     public Product(int ID, String ten, String hinhanh, String hinhanh2, String hinhanh3, String hinhanh4, Integer gia, String thongsokithuat, String mota, int IDloaisanpham, int IDsanpham, int status) {
         this.ID = ID;
         Ten = ten;
