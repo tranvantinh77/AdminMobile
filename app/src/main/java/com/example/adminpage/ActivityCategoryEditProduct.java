@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class ActivityCategoryEditPhone extends AppCompatActivity {
+public class ActivityCategoryEditProduct extends AppCompatActivity {
 
     Toolbar toolbar_edit_phone;
     LinearLayout submit_edit_phone;
@@ -17,7 +17,7 @@ public class ActivityCategoryEditPhone extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_phone);
+        setContentView(R.layout.activity_edit_product);
 
         toolbar_edit_phone = findViewById(R.id.toolbar_activity);
         submit_edit_phone = findViewById(R.id.submit_edit_phone);
@@ -41,7 +41,7 @@ public class ActivityCategoryEditPhone extends AppCompatActivity {
         submit_edit_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ActivityCategoryEditPhone.this, "Test submit edit phone", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityCategoryEditProduct.this, "Test submit edit phone", Toast.LENGTH_SHORT).show();
             }
         });
 

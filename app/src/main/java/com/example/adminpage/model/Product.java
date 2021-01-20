@@ -3,34 +3,66 @@ package com.example.adminpage.model;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    private int ID;
-    private String Ten;
-    private String Hinhanh;
-    private Integer Gia;
-    private String Thongsokithuat;
-    private String Mota;
-    private int IDsanphamdienthoai;
-    private int IDsanpham;
+    public int ID;
+    public String Ten;
+    public String Hinhanh;
+    public String Hinhanh2;
+    public String Hinhanh3;
+    public String Hinhanh4;
+    public Integer Gia;
+    public String Thongsokithuat;
+    public String Mota;
+    public int IDloaisanpham;
+    public int IDsanpham;
+    public int Status;
 
-    public Product(int ID, String ten, String hinhanh, Integer gia, String thongsokithuat, String mota, int IDsanphamdienthoai, int IDsanpham) {
+    public Product() {
+    }
+
+    // constructor phu kien
+    public Product(int ID, String ten, String hinhanh, String hinhanh2, String hinhanh3, String hinhanh4, Integer gia, String thongsokithuat, String mota, int IDsanpham) {
         this.ID = ID;
-        this.Ten = ten;
-        this.Hinhanh = hinhanh;
-        this.Gia = gia;
-        this.Thongsokithuat = thongsokithuat;
-        this.Mota = mota;
-        this.IDsanphamdienthoai = IDsanphamdienthoai;
+        Ten = ten;
+        Hinhanh = hinhanh;
+        Hinhanh2 = hinhanh2;
+        Hinhanh3 = hinhanh3;
+        Hinhanh4 = hinhanh4;
+        Gia = gia;
+        Thongsokithuat = thongsokithuat;
+        Mota = mota;
         this.IDsanpham = IDsanpham;
     }
 
-    public Product(int ID, String ten, String hinhanh, Integer gia, String thongsokithuat, String mota, int IDsanpham) {
+    // constructor điện thoiaj, laptop
+    public Product(int ID, String ten, String hinhanh, String hinhanh2, String hinhanh3, String hinhanh4, Integer gia, String thongsokithuat, String mota, int IDloaisanpham, int IDsanpham) {
+
         this.ID = ID;
-        this.Ten = ten;
-        this.Hinhanh = hinhanh;
-        this.Gia = gia;
-        this.Thongsokithuat = thongsokithuat;
-        this.Mota = mota;
+        Ten = ten;
+        Hinhanh = hinhanh;
+        Hinhanh2 = hinhanh2;
+        Hinhanh3 = hinhanh3;
+        Hinhanh4 = hinhanh4;
+        Gia = gia;
+        Thongsokithuat = thongsokithuat;
+        Mota = mota;
+        this.IDloaisanpham = IDloaisanpham;
         this.IDsanpham = IDsanpham;
+    }
+
+    // constructor sản phẩm nổi bật
+    public Product(int ID, String ten, String hinhanh, String hinhanh2, String hinhanh3, String hinhanh4, Integer gia, String thongsokithuat, String mota, int IDloaisanpham, int IDsanpham, int status) {
+        this.ID = ID;
+        Ten = ten;
+        Hinhanh = hinhanh;
+        Hinhanh2 = hinhanh2;
+        Hinhanh3 = hinhanh3;
+        Hinhanh4 = hinhanh4;
+        Gia = gia;
+        Thongsokithuat = thongsokithuat;
+        Mota = mota;
+        this.IDloaisanpham = IDloaisanpham;
+        this.IDsanpham = IDsanpham;
+        Status = status;
     }
 
     public int getID() {
@@ -57,6 +89,30 @@ public class Product implements Serializable {
         Hinhanh = hinhanh;
     }
 
+    public String getHinhanh2() {
+        return Hinhanh2;
+    }
+
+    public void setHinhanh2(String hinhanh2) {
+        Hinhanh2 = hinhanh2;
+    }
+
+    public String getHinhanh3() {
+        return Hinhanh3;
+    }
+
+    public void setHinhanh3(String hinhanh3) {
+        Hinhanh3 = hinhanh3;
+    }
+
+    public String getHinhanh4() {
+        return Hinhanh4;
+    }
+
+    public void setHinhanh4(String hinhanh4) {
+        Hinhanh4 = hinhanh4;
+    }
+
     public Integer getGia() {
         return Gia;
     }
@@ -81,12 +137,12 @@ public class Product implements Serializable {
         Mota = mota;
     }
 
-    public int getIDsanphamdienthoai() {
-        return IDsanphamdienthoai;
+    public int getIDloaisanpham() {
+        return IDloaisanpham;
     }
 
-    public void setIDsanphamdienthoai(int IDsanphamdienthoai) {
-        this.IDsanphamdienthoai = IDsanphamdienthoai;
+    public void setIDloaisanpham(int IDsanphamdienthoai) {
+        this.IDloaisanpham = IDsanphamdienthoai;
     }
 
     public int getIDsanpham() {
@@ -95,5 +151,13 @@ public class Product implements Serializable {
 
     public void setIDsanpham(int IDsanpham) {
         this.IDsanpham = IDsanpham;
+    }
+
+    public int getStatus() {
+        return Status;
+    }
+
+    public void setStatus(int status) {
+        Status = status;
     }
 }

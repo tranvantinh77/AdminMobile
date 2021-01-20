@@ -28,11 +28,11 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_name_add"
+                    android:id="@+id/txtIL_phone_name_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:hint="Tên laptop"
+                    android:hint="Tên sản phẩm"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -44,7 +44,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_img_url1_add"
+                    android:id="@+id/txtIL_phone_img_url1_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -60,7 +60,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_img_url2_add"
+                    android:id="@+id/txtIL_phone_img_url2_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -76,7 +76,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_img_url3_add"
+                    android:id="@+id/txtIL_phone_img_url3_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -92,7 +92,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_img_url4_add"
+                    android:id="@+id/txtIL_phone_img_url4_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -108,7 +108,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_price_add"
+                    android:id="@+id/txtIL_phone_price_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -124,10 +124,11 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_details_add"
+                    android:id="@+id/txtIL_phone_details_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
+                    android:inputType="textMultiLine"
                     android:hint="Thông số kỹ thuật" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -139,12 +140,13 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtIL_lap_description_add"
+                    android:id="@+id/txtIL_phone_description_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Mô tả"
                     android:inputType="textMultiLine"
-                    android:fontFamily="@font/roboto_medium" />
+                    android:fontFamily="@font/roboto_medium"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -155,7 +157,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_loai_sanpham"
+                    android:id="@+id/id_loai_sanpham_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -171,7 +173,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/id_sanpham"
+                    android:id="@+id/id_sanpham_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -187,7 +189,7 @@
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/status"
+                    android:id="@+id/status_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
@@ -197,7 +199,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
-                android:id="@+id/submit_add_laptop"
+                android:id="@+id/submit_add_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -217,7 +219,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Thêm laptop"
+                    android:text="Thêm"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
 

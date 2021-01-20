@@ -12,10 +12,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.adminpage.adapter.ProductAdapter;
 import com.example.adminpage.dialog.MyCustomDialog;
@@ -27,12 +30,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ActivityCategoryListPhone extends AppCompatActivity {
 
     Toolbar toolbar_cgr_list_phone;
     RecyclerView rcv_phone;
     ImageView imgV_add_phone;
+    ArrayList<Product> list = new ArrayList<>();
     ProductAdapter productAdapter;
 
     @Override
@@ -62,7 +68,7 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
         imgV_add_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Function.goToActivityCategoryAddPhone(ActivityCategoryListPhone.this);
+                Function.goToActivityAddProduct(ActivityCategoryListPhone.this);
             }
         });
 
@@ -70,7 +76,7 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
         productAdapter = new ProductAdapter(getDT(), new ProductAdapter.IClickItemListener() {
             @Override
             public void onClickEdit(Product product) {
-                Function.goToActivityCategoryEditPhone(ActivityCategoryListPhone.this);
+                Function.goToActivityEditProduct(ActivityCategoryListPhone.this);
             }
 
             @Override
@@ -86,46 +92,66 @@ public class ActivityCategoryListPhone extends AppCompatActivity {
     }
 
     private ArrayList<Product> getDT() {
-        final ArrayList<Product> list = new ArrayList<>();
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.duongdandienthoai, new Response.Listener<JSONArray>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.datasanpham, new Response.Listener<String>() {
             @Override
-            public void onResponse(JSONArray response) {
+            public void onResponse(String response) {
+                int id = 0;
+                String ten = "";
+                String hinhanh = "";
+                String hinhanh2 = "";
+                String hinhanh3 = "";
+                String hinhanh4 = "";
+                Integer gia = 0;
+                String thongsokithuat = "";
+                String mota = "";
+                int idloaisanpham = 0;
+                int idsanpham = 0;
+                int status = 0;
                 if (response != null) {
-                    int id = 0;
-                    String ten = "";
-                    String hinhanh = "";
-                    Integer gia = 0;
-                    String thongsokithuat = "";
-                    String mota = "";
-                    int idsanphamdienthoai = 0;
-                    int idsanpham = 0;
-                    for (int i = 0; i < response.length(); i++) {
-                        try {
-                            JSONObject jsonObject = response.getJSONObject(i);
+                    try {
+                        JSONArray jsonArray =new JSONArray(response);
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
                             id = jsonObject.getInt("id");
                             ten = jsonObject.getString("ten");
                             hinhanh = jsonObject.getString("hinhanh");
+                            hinhanh2 = jsonObject.getString("hinhanh2");
+                            hinhanh3 = jsonObject.getString("hinhanh3");
+                            hinhanh4 = jsonObject.getString("hinhanh4");
                             gia = jsonObject.getInt("gia");
                             thongsokithuat = jsonObject.getString("thongsokithuat");
                             mota = jsonObject.getString("mota");
-                            idsanphamdienthoai = jsonObject.getInt("idsanphamdienthoai");
+                            idloaisanpham = jsonObject.getInt("idloaisanpham");
                             idsanpham = jsonObject.getInt("idsanpham");
-                            list.add(new Product(id, ten, hinhanh, gia, thongsokithuat, mota, idsanphamdienthoai, idsanpham));
+                            status = jsonObject.getInt("status");
+                            list.add(new Product(id,ten,hinhanh,hinhanh2, hinhanh3, hinhanh4,gia,thongsokithuat,mota,idloaisanpham,idsanpham,status));
                             productAdapter.notifyDataSetChanged();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
                         }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                 }
+
+
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
 
             }
-        });
-        requestQueue.add(jsonArrayRequest);
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> param = new HashMap<String, String>();
+                param.put("idsanpham", String.valueOf(1));
+                return param;
+            }
+        };
+
+        requestQueue.add(stringRequest);
+
         return list;
     }
 }

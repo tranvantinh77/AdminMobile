@@ -25,12 +25,8 @@
         <activity android:name=".ActivityCategoryListPhone"></activity>
         <activity android:name=".ActivityCategoryListLaptop"></activity>
         <activity android:name=".ActivityCategoryListAcce"></activity>
-        <activity android:name=".ActivityCategoryAddPhone"></activity>
-        <activity android:name=".ActivityCategoryAddLaptop"></activity>
-        <activity android:name=".ActivityCategoryAddAcce"></activity>
-        <activity android:name=".ActivityCategoryEditPhone"></activity>
-        <activity android:name=".ActivityCategoryEditLaptop"></activity>
-        <activity android:name=".ActivityCategoryEditAcce"></activity>
+        <activity android:name=".ActivityCategoryAddProduct"></activity>
+        <activity android:name=".ActivityCategoryEditProduct"></activity>
 
 
         <meta-data

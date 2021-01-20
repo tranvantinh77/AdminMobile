@@ -61,44 +61,17 @@ public class Function {
         context.startActivity(myIntent);
     }
 
-    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Thêm điện thoại
-    public static void goToActivityCategoryAddPhone(Context context) {
-        Intent myIntent = new Intent(context, ActivityCategoryAddPhone.class);
+    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Thêm Product
+    public static void goToActivityAddProduct(Context context) {
+        Intent myIntent = new Intent(context, ActivityCategoryAddProduct.class);
         context.startActivity(myIntent);
     }
 
-    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Sửa điện thoại
-    public static void goToActivityCategoryEditPhone(Context context) {
-        Intent myIntent = new Intent(context, ActivityCategoryEditPhone.class);
+    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Sửa product
+    public static void goToActivityEditProduct(Context context) {
+        Intent myIntent = new Intent(context, ActivityCategoryEditProduct.class);
         context.startActivity(myIntent);
     }
-
-    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Thêm laptop
-    public static void goToActivityCategoryAddLaptop(Context context) {
-        Intent myIntent = new Intent(context, ActivityCategoryAddLaptop.class);
-        context.startActivity(myIntent);
-    }
-
-    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Sửa laptop
-    public static void goToActivityCategoryEditLap(Context context) {
-        Intent myIntent = new Intent(context, ActivityCategoryEditLaptop.class);
-        context.startActivity(myIntent);
-    }
-
-    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Thêm phụ kiện
-    public static void goToActivityCategoryAddAcce(Context context) {
-        Intent myIntent = new Intent(context, ActivityCategoryAddAcce.class);
-        context.startActivity(myIntent);
-    }
-
-    // Quản lý danh mục -> Danh sách danh mục -> Danh sách điện thoại -> Sửa phụ kiện
-    public static void goToActivityCategoryEditAcce(Context context) {
-        Intent myIntent = new Intent(context, ActivityCategoryEditAcce.class);
-        context.startActivity(myIntent);
-    }
-
-
-
 
     /**
      * Quản lý Người dùng
