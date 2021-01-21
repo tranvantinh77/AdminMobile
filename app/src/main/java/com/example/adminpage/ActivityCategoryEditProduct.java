@@ -1,7 +1,6 @@
 package com.example.adminpage;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -43,7 +42,7 @@ public class ActivityCategoryEditProduct extends AppCompatActivity {
         toolbar_edit_phone.setNavigationIcon(R.drawable.back_white);
 
         // Set title cho toolbar
-        setTitle("Chỉnh sửa điện thoại");
+        setTitle("Chỉnh sửa sản phẩm");
         setSupportActionBar(toolbar_edit_phone);
 
         // Set sự kiện cho nút back của toolbar
@@ -87,9 +86,7 @@ public class ActivityCategoryEditProduct extends AppCompatActivity {
 
                 txtIL_id_edit.setEnabled(false);
             }
-
         }
-
     }
 
     public void editProduct() {

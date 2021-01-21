@@ -7,8 +7,10 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -38,6 +40,7 @@ import java.util.Map;
 
 public class ActivityCategoryListAcce extends AppCompatActivity {
 
+    Dialog dialog;
     Toolbar toolbar_cgr_list_accessories;
     RecyclerView rcv_accessories;
     ImageView imgV_add_acce;
@@ -84,10 +87,58 @@ public class ActivityCategoryListAcce extends AppCompatActivity {
             }
 
             @Override
-            public void onClickRemove(Product product) {
-                String message = "Bạn có chắc muốn xoá ?";
-                MyCustomDialog myCustomDialog = new MyCustomDialog(ActivityCategoryListAcce.this, message);
-                myCustomDialog.show();
+            public void onClickRemove(final Product product) {
+                dialog = new Dialog(ActivityCategoryListAcce.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.custom_dialog);
+                dialog.show();
+
+                TextView tv_message = dialog.findViewById(R.id.txt_message_dialog);
+
+                tv_message.setText("Bạn có chắc muốn xoá ?");
+
+                Button btn_yes = dialog.findViewById(R.id.btn_yes_dialog);
+                Button btn_no = dialog.findViewById(R.id.btn_no_dialog);
+
+                btn_yes.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        final String id = String.valueOf(product.getID());
+                        if (id.length() > 0) {
+                            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                            StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.xoasanpham, new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    if (!response.equals("")) {
+                                        finish();
+                                        Toast.makeText(getApplicationContext(), "Xoá sản phẩm thành công", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Xoá sản phẩm thất bại", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            }, new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+
+                                }
+                            }) {
+                                @Override
+                                protected Map<String, String> getParams() throws AuthFailureError {
+                                    HashMap<String, String> param = new HashMap<String, String>();
+                                    param.put("id", id);
+                                    return param;
+                                }
+                            };
+                            requestQueue.add(stringRequest);
+                        }
+                    }
+                });
+                btn_no.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
             }
         });
 

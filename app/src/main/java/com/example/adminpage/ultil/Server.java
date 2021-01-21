@@ -14,4 +14,6 @@ public class Server {
     public static String themsanpham = "https://tranvantinhit77nul.000webhostapp.com/server/themsanpham.php";
     public static String suasanpham = "https://tranvantinhit77nul.000webhostapp.com/server/suasanpham.php";
     public static String xoasanpham = "https://tranvantinhit77nul.000webhostapp.com/server/xoasanpham.php";
+    public static String datauser = "https://tranvantinhit77nul.000webhostapp.com/server/datauser.php";
+    public static String suaaccount = "https://tranvantinhit77nul.000webhostapp.com/server/suaaccount.php";
 }

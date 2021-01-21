@@ -27,6 +27,7 @@
         <activity android:name=".ActivityCategoryListAcce"></activity>
         <activity android:name=".ActivityCategoryAddProduct"></activity>
         <activity android:name=".ActivityCategoryEditProduct"></activity>
+        <activity android:name=".ActivityCategoryEditUser"></activity>
 
 
         <meta-data
