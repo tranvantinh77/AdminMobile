@@ -3,6 +3,7 @@ package com.example.adminpage.ultil;
 public class Server {
     public static String signup = "https://tranvantinhit77nul.000webhostapp.com/server/signup.php";
     public static String login = "https://tranvantinhit77nul.000webhostapp.com/server/login.php";
+    public static String loginadmin = "https://tranvantinhit77nul.000webhostapp.com/server/loginadmin.php";
     public static String changepassword = "https://tranvantinhit77nul.000webhostapp.com/server/changepassword.php";
     public static String getfullname = "https://tranvantinhit77nul.000webhostapp.com/server/getfullname.php";
 

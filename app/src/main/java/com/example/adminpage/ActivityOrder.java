@@ -110,6 +110,8 @@ public class ActivityOrder extends AppCompatActivity implements NavigationView.O
                 finish();
                 break;
             case R.id.nav_logout_item:
+                startActivity(new Intent(ActivityOrder.this, ActivityLogin.class));
+                finish();
                 break;
         }
         return false;

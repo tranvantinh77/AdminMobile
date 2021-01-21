@@ -27,6 +27,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -105,7 +106,8 @@ public class ActivityListOrderDetails extends AppCompatActivity {
                         for (OrderDetails orderDetails : list) {
                             total += orderDetails.getGiasanpham();
                         }
-                        txtV_total.setText(String.valueOf(total));
+                        DecimalFormat decimalFormat = new DecimalFormat("###,###,###,###");
+                        txtV_total.setText(decimalFormat.format(total));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

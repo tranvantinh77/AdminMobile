@@ -1,5 +1,6 @@
 package com.example.adminpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -72,27 +73,6 @@ public class ActivityCategory extends AppCompatActivity implements NavigationVie
         menu.getItem(2).setChecked(true);
     }
 
-
-//    public void goToFragmentCategory_List() {
-//        FragmentCategoryList fragmentCategoryList = new FragmentCategoryList();
-//        FragmentManager fm = getSupportFragmentManager();
-//        FragmentTransaction ft = fm.beginTransaction();
-//        ft.replace(R.id.fragment_container_cgr, fragmentCategoryList);
-//        ft.addToBackStack(FragmentCategoryList.TAG);
-//        ft.commit();
-//        drawerLayout_cgr.setVisibility(View.INVISIBLE);
-//    }
-
-//    public void goToFragmentCategory_Add() {
-//        FragmentCategoryAdd fragmentCategoryAdd = new FragmentCategoryAdd();
-//        FragmentManager fm = getSupportFragmentManager();
-//        FragmentTransaction ft = fm.beginTransaction();
-//        ft.replace(R.id.fragment_container_cgr, fragmentCategoryAdd);
-//        ft.addToBackStack(FragmentCategoryAdd.TAG);
-//        ft.commit();
-//        drawerLayout_cgr.setVisibility(View.INVISIBLE);
-//    }
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -111,6 +91,8 @@ public class ActivityCategory extends AppCompatActivity implements NavigationVie
                 finish();
                 break;
             case R.id.nav_logout_item:
+                startActivity(new Intent(ActivityCategory.this, ActivityLogin.class));
+                finish();
                 break;
         }
         return true;

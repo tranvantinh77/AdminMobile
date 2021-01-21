@@ -8,6 +8,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -100,6 +101,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Function.goToActivityUser(MainActivity.this);
                 break;
             case R.id.nav_logout_item:
+                startActivity(new Intent(MainActivity.this, ActivityLogin.class));
+                finish();
                 break;
         }
         drawerLayout_main.closeDrawer(GravityCompat.START);

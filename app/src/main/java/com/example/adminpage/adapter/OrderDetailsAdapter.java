@@ -13,6 +13,7 @@ import com.example.adminpage.R;
 import com.example.adminpage.model.OrderDetails;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapter.ItemHolder>{
@@ -36,7 +37,8 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
     public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
         final OrderDetails orderDetails = arrayList.get(position);
         holder.txt_product_name_od.setText(orderDetails.getTensanpham());
-        holder.txt_product_price_od.setText(String.valueOf(orderDetails.getGiasanpham()));
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+        holder.txt_product_price_od.setText(decimalFormat.format(orderDetails.getGiasanpham()) + " Đ");
         holder.txt_product_quantity.setText(String.valueOf(orderDetails.getSoluongsanpham()));
         holder.txt_product_code.setText(String.valueOf(orderDetails.getMasanpham()));
         holder.txt_order_code.setText(String.valueOf(orderDetails.getMadonhang()));

@@ -120,6 +120,8 @@ public class ActivityUser extends AppCompatActivity implements NavigationView.On
                 drawerLayout_user.closeDrawer(GravityCompat.START);
                 break;
             case R.id.nav_logout_item:
+                startActivity(new Intent(ActivityUser.this, ActivityLogin.class));
+                finish();
                 break;
         }
         return true;
