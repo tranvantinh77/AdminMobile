@@ -78,7 +78,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/roboto_medium"
-                            android:text="Tổng số người dùng"
+                            android:text="Tổng số tài khoản"
                             android:textSize="20sp" />
 
                     </RelativeLayout>
