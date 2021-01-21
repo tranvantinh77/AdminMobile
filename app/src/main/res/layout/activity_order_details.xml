@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_activity">
+
+    </include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="9"
+        android:id="@+id/rcv_order_details"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp">
+
+        <TextView
+            android:layout_marginStart="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiền: "
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@android:color/holo_red_light">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtV_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Đ"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@android:color/holo_red_light">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

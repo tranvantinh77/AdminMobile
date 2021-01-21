@@ -15,5 +15,7 @@ public class Server {
     public static String suasanpham = "https://tranvantinhit77nul.000webhostapp.com/server/suasanpham.php";
     public static String xoasanpham = "https://tranvantinhit77nul.000webhostapp.com/server/xoasanpham.php";
     public static String datauser = "https://tranvantinhit77nul.000webhostapp.com/server/datauser.php";
+    public static String dataorder = "https://tranvantinhit77nul.000webhostapp.com/server/dataorder.php";
+    public static String dataorderdetails = "https://tranvantinhit77nul.000webhostapp.com/server/dataorderdetails.php";
     public static String suaaccount = "https://tranvantinhit77nul.000webhostapp.com/server/suaaccount.php";
 }

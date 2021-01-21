@@ -42,6 +42,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemHolder>{
         holder.txt_user_name.setText(user.getFullname());
         holder.txt_user_email.setText(user.getEmail());
         holder.txt_user_phone.setText(user.getPhone());
+        holder.txt_user_role.setText(String.valueOf(user.getRole()));
 
         holder.imgB_icon_edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +62,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemHolder>{
 
     public class ItemHolder extends RecyclerView.ViewHolder {
         ImageButton imgB_icon_edit;
-        TextView txt_user_name, txt_user_phone, txt_user_email;
+        TextView txt_user_name, txt_user_phone, txt_user_email, txt_user_role;
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,6 +70,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemHolder>{
             txt_user_name = itemView.findViewById(R.id.txt_user_name);
             txt_user_phone = itemView.findViewById(R.id.txt_user_phone);
             txt_user_email = itemView.findViewById(R.id.txt_user_email);
+            txt_user_role = itemView.findViewById(R.id.txt_user_role);
             imgB_icon_edit = itemView.findViewById(R.id.imgB_icon_edit_user);
         }
     }

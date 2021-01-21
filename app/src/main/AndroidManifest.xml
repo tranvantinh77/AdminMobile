@@ -28,6 +28,7 @@
         <activity android:name=".ActivityCategoryAddProduct"></activity>
         <activity android:name=".ActivityCategoryEditProduct"></activity>
         <activity android:name=".ActivityCategoryEditUser"></activity>
+        <activity android:name=".ActivityListOrderDetails"></activity>
 
 
         <meta-data

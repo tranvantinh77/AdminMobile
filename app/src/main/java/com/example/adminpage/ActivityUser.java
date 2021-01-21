@@ -50,7 +50,6 @@ public class ActivityUser extends AppCompatActivity implements NavigationView.On
     ArrayList<User> list;
     UserAdapter userAdapter;
     TextView tv_numb_user;
-    int count_user;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
