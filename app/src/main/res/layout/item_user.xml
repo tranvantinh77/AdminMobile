@@ -100,13 +100,6 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_medium"
-                            android:text="Chức vụ: "
-                            android:textSize="16sp" />
-
-                        <TextView
                             android:id="@+id/txt_user_role"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

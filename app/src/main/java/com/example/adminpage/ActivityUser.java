@@ -84,6 +84,7 @@ public class ActivityUser extends AppCompatActivity implements NavigationView.On
                 Intent intent = new Intent(getApplicationContext(), ActivityCategoryEditUser.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
 

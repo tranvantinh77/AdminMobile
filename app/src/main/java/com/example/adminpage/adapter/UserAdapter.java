@@ -42,7 +42,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ItemHolder>{
         holder.txt_user_name.setText(user.getFullname());
         holder.txt_user_email.setText(user.getEmail());
         holder.txt_user_phone.setText(user.getPhone());
-        holder.txt_user_role.setText(String.valueOf(user.getRole()));
+
+        if (user.getRole() == 1) {
+            holder.txt_user_role.setText("Quyền: tài khoản người dùng.");
+        }
+        if (user.getRole() == 2) {
+            holder.txt_user_role.setText("Quyền: tài khoản admin.");
+        }
+        if (user.getRole() == 0) {
+            holder.txt_user_role.setText("Quyền: tài khoản đã bị khóa.");
+        }
+
 
         holder.imgB_icon_edit.setOnClickListener(new View.OnClickListener() {
             @Override

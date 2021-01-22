@@ -1,5 +1,6 @@
 package com.example.adminpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -98,6 +99,7 @@ public class ActivityCategoryEditUser extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     if (!response.equals("")) {
+                        startActivity(new Intent(getApplicationContext(), ActivityUser.class));
                         finish();
                         Toast.makeText(getApplicationContext(), "Sửa người dùng thành công", Toast.LENGTH_SHORT).show();
                     } else {
